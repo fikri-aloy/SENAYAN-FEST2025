@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAYAN FEST 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+        body {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .info {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            transition: color 0.3s ease;
+        }
+
+        .info:hover {
+            color: #ffd700;
+        }
+
+        .ticket {
+            display: inline-block;
+            background: #ff477e;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .ticket:hover {
+            background: #ff2f6c;
+            transform: scale(1.1);
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .contact {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 10px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ffd700;
+        }
+
+        .artist-section {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .artist {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Tombol Play Musik */
+        .music-btn {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .music-btn:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>SENAYAN FEST 2025 🎵</h1>
+    
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        Konser dimulai dalam: <span id="timer"></span>
+    </div>
+
+    <div class="container">
+        <p class="info"><strong>🔥 Event:</strong> SENAYAN FEST!</p>
+        <p class="info"><strong>🎤 Artis:</strong> Paul Klein, .Adam lavine</p>
+        <p class="info"><strong>📅 Waktu:</strong> 12 February 2025, 19:00 WIB</p>
+        <p class="info"><strong>📍 Tempat:</strong> Stadion Gelora Senayan, Jakarta</p>
+        <a href="https://tiketkonser.com" class="ticket">🎟 Beli Tiket Sekarang</a>
+        
+        <!-- Daftar Artis & Album -->
+        <div class="artist-section">
+            <h2>🎶 Artis & Album yang Akan Dibawakan:</h2>
+            <p class="artist"><strong>LANY</strong> - Album: "Malibu nights"</p>
+            <p class="artist"><strong>.MAROON 5</strong> - Album: "Overexposed Track By Track"</p>
+        </div>
+
+        <div class="contact">
+            <p><strong>📞 Kontak:</strong> 0895-3585-29729</p>
+            <p><strong>📧 Email:</strong> fikrinadhif8@gmail.com</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://facebook.com/konser2025" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fikridipp_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/konser2025" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/konser2025" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Tombol Play Musik -->
+        <button class="music-btn" onclick="playMusic()">▶ Play Musik</button>
+
+    </div>
+
+    <!-- Efek Musik -->
+    <audio id="background-music" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-energy.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("February 12, 2025 19:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = `${days}h ${hours}m ${minutes}s ${seconds}s`;
+        }
+        setInterval(updateCountdown, 1000);
+
+        function playMusic() {
+            document.getElementById("background-music").play();
+        }
+    </script>
+
+</body>
+</html>
