@@ -182,7 +182,7 @@
 
     <script>
         function updateCountdown() {
-            const eventDate = new Date("April 13, 2026 19:00:00").getTime();
+            const eventDate = new Date("13 april, 2025 19:00:00").getTime();
             const now = new Date().getTime();
             const distance = eventDate - now;
 
@@ -194,6 +194,8 @@
             document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
         setInterval(updateCountdown, 1000);
+        if (distance < 0) {
+            document.getELementById("countdown").innerhtml = "acara sudah selesai";
 
         function playMusic() {
             document.getElementById("background-music").play();
